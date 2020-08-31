@@ -1,0 +1,25 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "easejs": "^0.2.9",
+    "es6": "0.0.7",
+    "gulp-concat": "^2.6.1",
+    "keen-tracking": "^4.5.0",
+    "lodash": "^4.17.19",
+    "mux-embed": "^3.3.0",
+    "videojs-contrib-eme": "^3.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

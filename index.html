@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/6.7/video.min.js"></script>
+   
+    <script src="/dist/player-api.js"></script>
+    <script src="node_modules/videojs-contrib-eme/dist/videojs-contrib-eme.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <video id="myVideo" class="allrites-player" data-id="501" controls></video>
+    </div>
+</body>
+
+
+
+<!-- Use HLS.js to support the HLS format in browsers. -->
+<script src="http://cdn.dashjs.org/v3.1.0/dash.all.min.js"></script>
+<script>
+  (function(){
+    console.log(window);
+    var analytics = new AllritesAnalytics({
+        token: 'WyIyNzAiLCJicm9uemUiLCIyMDIwLTA5LTMwIiwiMjAyMC0wOC0zMSJd'
+    });
+
+    // Replace with your asset's playback ID
+    var playbackId = "JOLPkSx8et4J5bGHCpdkPwLKMFSBCIgtwfdrIGxQdAc";
+    var url = "https://public-raw-videos.s3-ap-southeast-1.amazonaws.com/test/play.mpd";
+    var player = dashjs.MediaPlayer().create();
+    var video = document.getElementById("myVideo");
+    player.initialize(document.querySelector("#myVideo"), url, true);
+   
+  })();
+</script>
+
+</html>
